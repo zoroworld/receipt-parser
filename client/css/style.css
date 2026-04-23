@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+    border: 2px dashed #d0d7e2;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background: #fafbff;
+}
+
+.upload-box:hover {
+    border-color: #0d6efd;
+    background: #eef5ff;
+    transform: translateY(-2px);
+}
+
+/* Icon circle */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e9f2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle i {
+    font-size: 24px;
+    color: #0d6efd;
+}
+
+/* File name */
+#fileName {
+    word-break: break-all;
+}

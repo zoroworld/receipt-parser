@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Receipt Parser</title>
+    <link rel="icon" href="favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+
+    <div class="card shadow-lg border-0 p-4 text-center" style="width: 380px; border-radius: 18px;">
+
+        <!-- Title -->
+        <h4 class="fw-semibold mb-1">Receipt Parser</h4>
+        <p class="text-muted small mb-4">Upload a receipt and extract structured data</p>
+
+        <form id="uploadForm">
+
+            <!-- Hidden file input -->
+            <input type="file" id="fileInput" accept="image/png, image/jpeg" hidden />
+
+            <!-- Upload Box -->
+            <label for="fileInput" class="upload-box mb-3">
+
+                <div class="icon-circle mb-2">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+
+                <div class="fw-medium">Upload Receipt</div>
+                <div class="text-muted small">PNG or JPG</div>
+
+            </label>
+
+            <!-- File name -->
+            <p id="fileName" class="small text-dark mb-3"></p>
+
+            <!-- Button -->
+            <button type="submit" class="btn btn-primary w-100 fw-medium">
+                Parse Receipt
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
