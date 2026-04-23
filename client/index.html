@@ -10,44 +10,72 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-light d-flex align-items-center justify-content-center vh-100">
+<body class="app-bg">
 
-    <div class="card shadow-lg border-0 p-4 text-center" style="width: 380px; border-radius: 18px;">
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
 
-        <!-- Title -->
-        <h4 class="fw-semibold mb-1">Receipt Parser</h4>
-        <p class="text-muted small mb-4">Upload a receipt and extract structured data</p>
+            <!-- LEFT PANEL -->
+            <div class="col-md-4 d-flex align-items-center justify-content-center sidebar">
 
-        <form id="uploadForm">
+                <div class="card upload-card shadow-lg border-0">
 
-            <!-- Hidden file input -->
-            <input type="file" id="fileInput" accept="image/png, image/jpeg" hidden />
+                    <div class="text-center mb-3">
+                        <div class="logo">🧾</div>
+                        <h4 class="fw-bold mt-2">Receipt Parser</h4>
+                        <p class="text-muted small">AI extracts structured data</p>
+                    </div>
 
-            <!-- Upload Box -->
-            <label for="fileInput" class="upload-box mb-3">
+                    <form id="uploadForm">
 
-                <div class="icon-circle mb-2">
-                    <i class="fa-solid fa-receipt"></i>
+                        <input type="file" id="fileInput" accept="image/png, image/jpeg" hidden />
+
+                        <label for="fileInput" class="upload-box">
+
+                            <i class="fa-solid fa-cloud-arrow-up icon"></i>
+
+                            <div class="mt-2 fw-semibold">Upload Receipt</div>
+                            <div class="text-muted small">PNG or JPG supported</div>
+
+                        </label>
+
+                        <p id="fileName" class="file-name"></p>
+
+                        <button class="btn btn-primary w-100 mt-3">
+                            Parse Receipt
+                        </button>
+
+                    </form>
+
                 </div>
 
-                <div class="fw-medium">Upload Receipt</div>
-                <div class="text-muted small">PNG or JPG</div>
+            </div>
 
-            </label>
+            <!-- RIGHT PANEL -->
+            <div class="col-md-8 p-4 result-area">
 
-            <!-- File name -->
-            <p id="fileName" class="small text-dark mb-3"></p>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="fw-bold">Parsed Result</h3>
 
-            <!-- Button -->
-            <button type="submit" class="btn btn-primary w-100 fw-medium">
-                Parse Receipt
-            </button>
+                    <!-- <button id="copyBtn" class="btn btn-dark btn-sm">
+                        Copy JSON
+                    </button> -->
+                </div>
 
-        </form>
+                <div id="resultCard" class="result-card shadow-sm">
+                    <div class="empty">
+                        <div class="emoji">📄</div>
+                        <p>No receipt parsed yet</p>
+                    </div>
+                </div>
 
+            </div>
+
+        </div>
     </div>
 
-    <script src="js/script.js"></script>
 </body>
+<script src="js/script.js"></script>
+
 
 </html>

@@ -1,46 +1,87 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body.app-bg {
+    background: linear-gradient(135deg, #f4f7ff, #eef3ff);
+    font-family: "Segoe UI", sans-serif;
 }
 
-.upload-box {
+/* LEFT SIDEBAR */
+.sidebar {
+    background: white;
+    border-right: 1px solid #e8eef7;
+}
+
+/* UPLOAD CARD */
+.upload-card {
+    width: 360px;
+    padding: 25px;
+    border-radius: 18px;
+}
+
+/* LOGO */
+.logo {
+    width: 55px;
+    height: 55px;
+    margin: auto;
+    border-radius: 50%;
+    background: #e8f0ff;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 22px;
+}
 
-    padding: 25px;
-    border: 2px dashed #d0d7e2;
+/* UPLOAD BOX */
+.upload-box {
+    border: 2px dashed #cfd8e3;
+    background: #f9fbff;
     border-radius: 16px;
+    padding: 28px;
+    display: block;
+    text-align: center;
     cursor: pointer;
     transition: all 0.25s ease;
-    background: #fafbff;
 }
 
 .upload-box:hover {
-    border-color: #0d6efd;
-    background: #eef5ff;
+    border-color: #4f7cff;
+    background: #eef4ff;
     transform: translateY(-2px);
 }
 
-/* Icon circle */
-.icon-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #e9f2ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.upload-box .icon {
+    font-size: 26px;
+    color: #4f7cff;
 }
 
-.icon-circle i {
-    font-size: 24px;
-    color: #0d6efd;
-}
-
-/* File name */
-#fileName {
+/* FILE NAME */
+.file-name {
+    font-size: 13px;
+    color: #666;
+    margin-top: 10px;
     word-break: break-all;
+}
+
+/* RIGHT PANEL */
+.result-area {
+    padding: 30px;
+}
+
+/* RESULT CARD */
+.result-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    min-height: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* EMPTY STATE */
+.empty {
+    text-align: center;
+    color: #999;
+    margin-top: 140px;
+}
+
+.empty .emoji {
+    font-size: 42px;
+    margin-bottom: 10px;
 }

@@ -1,5 +1,7 @@
 import { getLLMProvider } from "../llm/factory";
 import { ReceiptOutput } from "../llm/types";
+import { saveReceipt } from "../storage/helper";
+
 
 const isMock = () => process.env.USE_MOCK === "true";
 
@@ -22,8 +24,7 @@ export const parseReceiptService = async (
     // ✅ MOCK MODE
     if (isMock()) {
       console.log("⚡ Using MOCK mode");
-
-      return {
+      const result = {
         merchant: "McDonald's",
         date: "2024-01-15",
         line_items: [
@@ -38,6 +39,9 @@ export const parseReceiptService = async (
         confidence: "high",
         notes: null,
       };
+      const saved = saveReceipt(result);
+
+      return saved
     }
 
     // ✅ REAL MODE (LLM)
@@ -52,6 +56,7 @@ export const parseReceiptService = async (
 
     // (optional safety log)
     console.log("LLM Result:", result);
+    const saved = saveReceipt(result);
 
     return result;
   } catch (err: any) {

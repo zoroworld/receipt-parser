@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1776959882209,
+    "createdAt": "2026-04-23T15:58:02.209Z",
+    "merchant": "McDonald's",
+    "date": "January 15, 2024",
+    "line_items": [
+      {
+        "name": "Big Mac",
+        "amount": 8.99
+      },
+      {
+        "name": "Large Fries",
+        "amount": 3.49
+      },
+      {
+        "name": "Coke",
+        "amount": 2
+      }
+    ],
+    "subtotal": 14.48,
+    "tax": 1.16,
+    "tip": 2,
+    "total": 17.64,
+    "confidence": "high",
+    "notes": null
+  },
+  {
+    "id": 1776959886809,
+    "createdAt": "2026-04-23T15:58:06.809Z",
+    "merchant": "McDonald's",
+    "date": "January 15, 2024",
+    "line_items": [
+      {
+        "name": "Big Mac",
+        "amount": 8.99
+      },
+      {
+        "name": "Large Fries",
+        "amount": 3.49
+      },
+      {
+        "name": "Coke",
+        "amount": 2
+      }
+    ],
+    "subtotal": 14.48,
+    "tax": 1.16,
+    "tip": 2,
+    "total": 17.64,
+    "confidence": "high",
+    "notes": null
+  }
+]
